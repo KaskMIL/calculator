@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "functional calculator build with html css and javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaskMIL/calculator.git"
+  },
+  "author": "Tomas Milanesi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaskMIL/calculator/issues"
+  },
+  "homepage": "https://github.com/KaskMIL/calculator#readme",
+  "dependencies": {
+    "sass": "^1.49.9"
+  }
+}
