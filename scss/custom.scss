@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap');
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  h1{
+    color: white;
+    margin: 0.8rem;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+  }
+  .calculator-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 1rem;
+    width: 450px;
+    border: 0.1px solid white;
+    border-radius: 1rem;
+
+    .display{
+        //background-color: white;
+        width: 100%;
+        height: 70px;
+        border: 0.1px solid white;
+        border-radius: 1rem;
+    }
+    .buttons-container{
+        width: 100%;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .options-row{
+            display: flex;
+        }
+
+        .operators-row{
+            display:flex;
+        }
+        
+        .numbers{
+            display: flex;
+        }
+    }
+
+    .button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        background-color: rgb(177, 177, 177);
+        height: 3.8rem;
+        width: 3.8rem;
+        margin: 0.5rem 1.5rem;
+        border: 0.1px solid black;
+        border-radius: 50%;
+    }
+
+    .button-operator{
+      background-color: rgb(228, 176, 65);
+      color: white;
+    }
+
+    .button-number{
+      background-color: rgb(68, 68, 68);
+      color: white;
+    }
+
+    .button-options{
+      background-color: rgb(182, 182, 182);
+      color: black;
+    }
+  }

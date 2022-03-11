@@ -1,1 +1,124 @@
-/* No CSS *//*# sourceMappingURL=custom.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;900&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1 {
+  color: white;
+  margin: 0.8rem;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100vw;
+  height: 100vh;
+  background-color: black;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+}
+
+.calculator-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  width: 450px;
+  border: 0.1px solid white;
+  border-radius: 1rem;
+}
+
+.calculator-container .display {
+  width: 100%;
+  height: 70px;
+  border: 0.1px solid white;
+  border-radius: 1rem;
+}
+
+.calculator-container .buttons-container {
+  width: 100%;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator-container .buttons-container .options-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-container .buttons-container .operators-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-container .buttons-container .numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.calculator-container .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #b1b1b1;
+  height: 3.8rem;
+  width: 3.8rem;
+  margin: 0.5rem 1.5rem;
+  border: 0.1px solid black;
+  border-radius: 50%;
+}
+
+.calculator-container .button-operator {
+  background-color: #e4b041;
+  color: white;
+}
+
+.calculator-container .button-number {
+  background-color: #444444;
+  color: white;
+}
+
+.calculator-container .button-options {
+  background-color: #b6b6b6;
+  color: black;
+}
+/*# sourceMappingURL=custom.css.map */

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KaskMIL/calculator#readme",
   "dependencies": {
+    "bootstrap-icons": "^1.8.1",
     "sass": "^1.49.9"
   }
 }

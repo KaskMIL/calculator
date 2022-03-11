@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="scss/custom.css">
     <title>Calculator</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <h1>Calculator</h1>
+    <div class="calculator-container">
+        <div class="display"></div>
+        <div class="buttons-container">
+            <div class="options-row">
+                <div class="button button-options" id="delete">Del</div>
+                <div class="button button-options" id="back">
+                    <i class="bi bi-arrow-left"></i>
+                </div>
+                <div class="button button-options" id="equal">=</div>
+            </div>
+            <div class="operators-row">
+                <div id="add" class="button button-operator">+</div>
+                <div id="substract" class="button button-operator">-</div>
+                <div id="multiply" class="button button-operator">x</div>
+                <div id="divide" class="button button-operator">/</div>
+            </div>
+            <div class="numbers">
+                <div id="seven" class="button button-number">7</div>
+                <div id="eigth" class="button button-number">8</div>
+                <div id="nine" class="button button-number">9</div>
+            </div>
+            <div class="numbers">
+                <div id="four" class="button button-number">4</div>
+                <div id="five" class="button button-number">5</div>
+                <div id="six" class="button button-number">6</div>
+            </div>
+            <div class="numbers">
+                <div id="one" class="button button-number">1</div>
+                <div id="two" class="button button-number">2</div>
+                <div id="three" class="button button-number">3</div>
+            </div>
+            <div id="zero" class="button button-number">0</div>
+        </div>
+    </div>
 </body>
 </html>
