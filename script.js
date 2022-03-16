@@ -262,4 +262,7 @@ clear.addEventListener("click", e =>{
     calculator.firstNumber = "";
     calculator.secondNumber = "";
     calculator.operation = "";
+});
+back.addEventListener("click", e =>{
+    
 })
