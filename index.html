@@ -11,8 +11,13 @@
 <body>
     <h1>Calculator</h1>
     <div class="calculator-container">
-        <div class="display"></div>
-        <div class="buttons-container">
+        <div class="display">
+            <div class="operation" id="operation">
+                154+341
+            </div>
+            <div id="result" class="operation">154</div>
+        </div>
+        <div class="buttons-container" id="buttons">
             <div class="options-row">
                 <div class="button button-options" id="delete">Del</div>
                 <div class="button button-options" id="back">
@@ -44,6 +49,10 @@
             <div id="zero" class="button button-number">0</div>
         </div>
     </div>
+    <footer>
+        Copyrigth &copy; Tom Milanesi <i class="bi bi-github"></i> 2022
+        
+    </footer>
 
     <script src="script.js"></script>
 </body>

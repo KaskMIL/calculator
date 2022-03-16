@@ -11,7 +11,8 @@ html {
 
 h1 {
   color: white;
-  margin: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
   height: 100vh;
   background-color: black;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .calculator-container {
@@ -54,6 +55,22 @@ body {
   height: 70px;
   border: 0.1px solid white;
   border-radius: 1rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.calculator-container .display .operation {
+  padding-right: 0.7rem;
+  font-weight: 400;
 }
 
 .calculator-container .buttons-container {
@@ -105,6 +122,7 @@ body {
   margin: 0.5rem 1.5rem;
   border: 0.1px solid black;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .calculator-container .button-operator {
@@ -120,5 +138,15 @@ body {
 .calculator-container .button-options {
   background-color: #b6b6b6;
   color: black;
+}
+
+footer {
+  color: white;
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+footer i {
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=custom.css.map */
