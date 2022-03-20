@@ -27,23 +27,28 @@ let calculator = {
     secondNumber: "",
     operation: "",
     result: "",
-    add: function (firstNumber, secondNumber) {
-        return firstNumber + secondNumber;
+    add: function () {
+        this.result =  parseInt(this.firstNumber) + parseInt(this.secondNumber);
     },
-    substract: function (firstNumber, secondNumber) {
-        let max = Math.max(arguments[0], arguments[1]);
-        let min = Math.min(arguments[0], arguments[1]);
-        return max - min;
+    substract: function () {
+        this.result = parseInt(this.firstNumber) - parseInt(this.secondNumber)
     },
-    multiply: function(firstNumber, secondNumber){
-        return firstNumber * secondNumber;
+    multiply: function(){
+        this.result =  parseInt(this.firstNumber) * parseInt(this.secondNumber);
     },
-    divide: function(firstNumber, secondNumber){
-        if(secondNumber!=0){
-            return toFixed(firstNumber/secondNumber);
-        }
+    divide: function(){
+            this.result = (parseInt(this.firstNumber)/parseInt(this.secondNumber)).toFixed(2);
     }
 };
+
+function numPressed(){
+    operation.innerHTML = "";
+    operation.innerHTML = `${calculator.firstNumber} ${calculator.operation} ${calculator.secondNumber}`
+}
+
+function resPressed(){
+    result.innerHTML = calculator.result;
+}
 
 //Adding numbers to the object
 zero.addEventListener("click", e =>{
@@ -63,7 +68,7 @@ zero.addEventListener("click", e =>{
             calculator.secondNumber += "0"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 one.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -82,7 +87,7 @@ one.addEventListener("click", e =>{
             calculator.secondNumber += "1"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 two.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -101,7 +106,7 @@ two.addEventListener("click", e =>{
             calculator.secondNumber += "2"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 three.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -120,7 +125,7 @@ three.addEventListener("click", e =>{
             calculator.secondNumber += "3"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 four.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -139,7 +144,7 @@ four.addEventListener("click", e =>{
             calculator.secondNumber += "4"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 five.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -158,7 +163,7 @@ five.addEventListener("click", e =>{
             calculator.secondNumber += "5"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 six.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -177,7 +182,7 @@ six.addEventListener("click", e =>{
             calculator.secondNumber += "6"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 seven.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -196,7 +201,7 @@ seven.addEventListener("click", e =>{
             calculator.secondNumber += "7"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 eigth.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -215,7 +220,7 @@ eigth.addEventListener("click", e =>{
             calculator.secondNumber += "8"
         }
     }
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 })
 nine.addEventListener("click", e =>{
     if(calculator.operation == ""){
@@ -234,35 +239,79 @@ nine.addEventListener("click", e =>{
             calculator.secondNumber += "9"
         };
     };
-    console.log(calculator.firstNumber,calculator.secondNumber)
+    numPressed();
 });
 
 //Adding operators to the object
 
 add.addEventListener("click", e =>{
-    calculator.operation = "add";
-    console.log(calculator.operation)
+    calculator.operation = "+";
+    numPressed();
 });
 substract.addEventListener("click", e =>{
-    calculator.operation = "substract";
-    console.log(calculator.operation)
+    calculator.operation = "-";
+    numPressed();
 });
 multiply.addEventListener("click", e =>{
-    calculator.operation = "multiply";
-    console.log(calculator.operation)
+    calculator.operation = "*";
+    numPressed();
 });
 divide.addEventListener("click", e =>{
-    calculator.operation = "divide";
-    console.log(calculator.operation)
+    calculator.operation = "/";
+    numPressed();
 });
 
 //Adding options
+
+function backspace (num){
+    let nuevo = num.slice(0 , -1);
+    return nuevo;
+};
 
 clear.addEventListener("click", e =>{
     calculator.firstNumber = "";
     calculator.secondNumber = "";
     calculator.operation = "";
+    calculator.result = "";
+    operation.innerHTML = "";
+    result.innerHTML = "";
 });
+
 back.addEventListener("click", e =>{
-    
+    if(calculator.result == ""){
+        if(calculator.operation == ""){
+            let sliceNum = backspace(calculator.firstNumber);
+            calculator.firstNumber = sliceNum;
+        }
+        else if(calculator.operation != "" && calculator.secondNumber == ""){
+            calculator.operation = "";
+        }
+        else{
+            let sliceNum = backspace(calculator.secondNumber);
+            calculator.secondNumber = sliceNum;
+        }
+    }
+    numPressed();
+});
+
+eqResult.addEventListener("click", e => {
+    if(calculator.operation == "+"){
+        calculator.add();
+    }
+    else if(calculator.operation == "-"){
+        calculator.substract();
+    }
+    else if(calculator.operation == "*"){
+        calculator.multiply();
+    }
+    else{
+        if(calculator.secondNumber == "0"){
+            calculator.result = "error"
+        }
+        else{
+            calculator.divide();
+        }
+    }
+
+    resPressed();
 })
