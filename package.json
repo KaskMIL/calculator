@@ -4,7 +4,7 @@
   "description": "functional calculator build with html css and javascript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/KaskMIL/calculator#readme",
   "dependencies": {
-    "bootstrap-icons": "^1.8.1",
     "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
   }
 }
