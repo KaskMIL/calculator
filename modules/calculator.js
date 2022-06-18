@@ -26,4 +26,6 @@ const divide = (num1, num2) => {
   }
 }
 
-module.exports = { add, substract, multiply, divide };
+export { add, substract, multiply, divide };
+
+//module.exports = { add, substract, multiply, divide };
