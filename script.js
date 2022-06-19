@@ -1,20 +1,15 @@
-import { add, substract, multiply, divide } from './modules/calculator.js'
-// Display
+import { add, substract, multiply, divide } from './modules/calculator.js';
+import { checkNum } from './modules/calcu_elements.js';
+//  Display
 const operation = document.getElementById("operation");
 const result = document.getElementById("result");
-//Options
-const clear = document.getElementById("delete");
-const back = document.getElementById("back");
-const eqResult = document.getElementById("equal");
-//Operators
-
+// Operators
 const btnContainer = document.getElementById('buttons');
 const optBtn =document.querySelectorAll('.button-options');
 const operBtn = document.querySelectorAll('.button-operator');
-const numBtn =document.querySelectorAll('.button-number');
-
+// Data
 let dataCont = [];
-const numData = [
+const numberData = [
     {id: 'zero', num: 0},
     {id: 'one', num: 1},
     {id: 'two', num: 2},
@@ -26,22 +21,26 @@ const numData = [
     {id: 'eigth', num: 8},
     {id: 'nine', num: 9}
 ];
+let temp1 = '';
+let temp2 = '';
 
 btnContainer.addEventListener('click', (e) => {
     const numTarg = e.target;
-    numData.forEach(element => {
+    numberData.forEach(element => {
         if (numTarg.id === element.id) {
-            console.log(element.num)
+            if (checkNum(dataCont)) {
+                temp1 += element.num
+            }
         }
     })
     operBtn.forEach(element => {
         if (e.target.innerHTML === element.innerHTML) {
-            console.log(element.innerHTML)
+            console.log(element.id)
         }
     })
     optBtn.forEach(element => {
         if (e.target.innerHTML === element.innerHTML) {
-            console.log(element.innerHTML)
+            console.log(element.id)
         }
     })
 })
