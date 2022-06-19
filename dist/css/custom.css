@@ -88,18 +88,8 @@ body {
           align-items: center;
 }
 
-.calculator-container .buttons-container .options-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.calculator-container .buttons-container .operators-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.calculator-container .buttons-container .options-row,
+.calculator-container .buttons-container .operators-row,
 .calculator-container .buttons-container .numbers {
   display: -webkit-box;
   display: -ms-flexbox;
