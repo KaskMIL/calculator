@@ -28,9 +28,10 @@ const numData = [
 ];
 
 btnContainer.addEventListener('click', (e) => {
-    numBtn.forEach(element => {
-        if (e.target.innerHTML === element.innerHTML) {
-            console.log(parseInt(element.innerHTML))
+    const numTarg = e.target;
+    numData.forEach(element => {
+        if (numTarg.id === element.id) {
+            console.log(element.num)
         }
     })
     operBtn.forEach(element => {
